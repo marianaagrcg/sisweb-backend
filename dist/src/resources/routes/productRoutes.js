@@ -14,7 +14,7 @@ productRouter.post(`/`, (req, res) => {
 productRouter.patch("/:id", (req, res) => {
     res.send(`Update the product ${req.params.id} with the values of ${req.body.name}`);
 });
-productRouter.delete("/", (req, res) => {
+productRouter.delete("/:id", (req, res) => {
     res.send(`Deleting the product ${req.body.id}`);
 });
 exports.default = productRouter;

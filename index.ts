@@ -16,7 +16,7 @@ import apiRouter from './src/resources/routes';
 const morgan = require('morgan');
 
 const app:Express = express();
-const port = 3000;
+const port = 2525;
 
 app.use(morgan('dev'));
 

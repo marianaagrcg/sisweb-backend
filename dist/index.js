@@ -16,7 +16,7 @@ const express_1 = __importDefault(require("express"));
 const routes_1 = __importDefault(require("./src/resources/routes"));
 const morgan = require('morgan');
 const app = (0, express_1.default)();
-const port = 3000;
+const port = 2525;
 app.use(morgan('dev'));
 app.use(express_1.default.json());
 app.use(routes_1.default);
