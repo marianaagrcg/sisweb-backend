@@ -1,33 +1,23 @@
 // const express = require('express')
+// const morgan = require('morgan')
 // const app = express()
-// const port = 3000
-// app.get('/', (req, res) => {
-//  res.send('Hello World!')
+// const port = 2525
+// app.use(morgan('dev'))
+// app.get('/', (req: any, res: { send: (arg0: string) => void }) => {
+//  res.send('Up and running!!')
 // })
 // app.listen(port, () => {
 //  console.log(`Example app listening on port ${port}`)
-// });
+// })
 
-
-import express, {Express, Request, Response} from 'express';
-
-import apiRouter from './src/resources/routes';
-
+import express, { Express, Request, Response } from "express";
+import apiRouter from './src/routes';
+const app: Express = express();
 const morgan = require('morgan');
-
-const app:Express = express();
 const port = 2525;
-
 app.use(morgan('dev'));
-
 app.use(express.json());
 app.use(apiRouter);
-
-app.get('/', (req:Request, res:Response) => {
-    res.send('Hello Madafaker!')
-})
-
 app.listen(port, () => {
-console.log(`Example app listening on port ${port}`)
-}) 
-
+console.log(`Example app listening on port ${port}`);
+});
